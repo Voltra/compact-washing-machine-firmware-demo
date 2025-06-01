@@ -1,5 +1,5 @@
 function(
-  myproject_enable_sanitizers
+  compact_washing_machine_firmware_demo_enable_sanitizers
   project_name
   ENABLE_SANITIZER_ADDRESS
   ENABLE_SANITIZER_LEAK

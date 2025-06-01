@@ -1,7 +1,7 @@
 include(CheckCXXCompilerFlag)
 
 macro(
-  myproject_enable_hardening
+  compact_washing_machine_firmware_demo_enable_hardening
   target
   global
   ubsan_minimal_runtime)
