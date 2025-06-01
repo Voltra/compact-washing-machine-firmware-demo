@@ -18,9 +18,9 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 project(
   compact_washing_machine_firmware_demo
   VERSION 0.0.1
-  DESCRIPTION ""
+  DESCRIPTION "A demo for modern and compact Washing Machine firmware, instead of the bloat that is current firmware"
   HOMEPAGE_URL "https://github.com/Voltra/compact-washing-machine-firmware-demo"
-  LANGUAGES CXX C)
+  LANGUAGES CXX)
 
 include(cmake/PreventInSourceBuilds.cmake)
 include(ProjectOptions.cmake)

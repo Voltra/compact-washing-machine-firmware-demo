@@ -1,2 +1,2 @@
-add_subdirectory(sample_library)
+add_subdirectory(compact_washing_machine_firmware_demo)
 add_subdirectory(ftxui_sample)

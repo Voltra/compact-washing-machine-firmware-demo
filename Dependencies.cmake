@@ -8,9 +8,15 @@ function(compact_washing_machine_firmware_demo_setup_dependencies)
   # For each dependency, see if it's
   # already been provided to us by a parent project
 
+  if(NOT TARGET magic_enum::magic_enum)
+    cpmaddpackage("gh:Neargye/magic_enum@0.9.7")
+  endif()
+
   if(NOT TARGET fmtlib::fmtlib)
     cpmaddpackage("gh:fmtlib/fmt#11.1.4")
   endif()
+
+  ###
 
   if(NOT TARGET spdlog::spdlog)
     cpmaddpackage(

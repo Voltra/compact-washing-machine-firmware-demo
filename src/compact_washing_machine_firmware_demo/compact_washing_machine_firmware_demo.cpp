@@ -1,4 +1,4 @@
-#include <compact_washing_machine_firmware_demo/sample_library.hpp>
+#include <compact_washing_machine_firmware_demo/compact_washing_machine_firmware_demo.hpp>
 
 int factorial(int input) noexcept
 {

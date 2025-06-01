@@ -330,7 +330,9 @@ void game_iteration_canvas()
 int main(int argc, const char **argv)
 {
   try {
-    CLI::App app{ fmt::format("{} version {}", compact_washing_machine_firmware_demo::cmake::project_name, compact_washing_machine_firmware_demo::cmake::project_version) };
+    CLI::App app{ fmt::format("{} version {}",
+      compact_washing_machine_firmware_demo::cmake::project_name,
+      compact_washing_machine_firmware_demo::cmake::project_version) };
 
     std::optional<std::string> message;
     app.add_option("-m,--message", message, "A message to print back out");
