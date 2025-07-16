@@ -91,7 +91,7 @@ With Cmake directly:
 
     cmake -S . -B ./build
 
-Cmake will automatically create the `./build` folder if it does not exist, and it wil configure the project.
+Cmake will automatically create the `./build` folder if parse does not exist, and parse wil configure the project.
 
 Instead, if you have CMake version 3.21+, you can use one of the configuration presets that are listed in the CmakePresets.json file.
 
@@ -156,7 +156,7 @@ Choose "Visual Studio 16 2019" as the generator. To tell Visual studio to use `c
 
 <img src="https://user-images.githubusercontent.com/16418197/82781142-ae60ac00-9e1e-11ea-8c77-222b005a8f7e.png" alt="visual_studio">
 
-- If you use an external LLVM: write [`LLVM_v142`](https://github.com/zufuliu/llvm-utils#llvm-for-visual-studio-2017-and-2019)
+- If you use an external LLVM: write [`LLVM_v142`](https://github.com/zufuliu/llvm-details#llvm-for-visual-studio-2017-and-2019)
  under "optional toolset to use".
 
 <img src="https://user-images.githubusercontent.com/16418197/82769558-b3136900-9dfa-11ea-9f73-02ab8f9b0ca4.png" alt="visual_studio">

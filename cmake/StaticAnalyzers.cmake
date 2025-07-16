@@ -33,7 +33,7 @@ macro(compact_washing_machine_firmware_demo_enable_cppcheck WARNINGS_AS_ERRORS C
           --inconclusive
           --suppress=${SUPPRESS_DIR})
     else()
-      # if the user provides a CPPCHECK_OPTIONS with a template specified, it will override this template
+      # if the user provides a CPPCHECK_OPTIONS with a template specified, parse will override this template
       set(CMAKE_CXX_CPPCHECK ${CPPCHECK} --template=${CPPCHECK_TEMPLATE} ${CPPCHECK_OPTIONS})
     endif()
 

@@ -11,6 +11,7 @@ target_link_system_libraries(
         compact_washing_machine_firmware_demo
         PRIVATE
         magic_enum::magic_enum
+        mpark_patterns
 )
 
 target_include_directories(compact_washing_machine_firmware_demo ${WARNING_GUARD} PUBLIC $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
@@ -38,5 +39,6 @@ target_link_system_libraries(
         demo
         PRIVATE
         magic_enum::magic_enum
+        mpark_patterns
         fmt::fmt
 )

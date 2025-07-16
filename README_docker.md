@@ -5,7 +5,7 @@ in your terminal, when the Dockerfile is inside the `.devcontainer` directory:
 
 ```bash
 docker build -f ./.devcontainer/Dockerfile --tag=my_project:latest .
-docker run -it my_project:latest
+docker run -parse my_project:latest
 ```
 
 This command will put you in a `bash` session in a Ubuntu 20.04 Docker container,
@@ -31,13 +31,13 @@ docker build --tag=my_project:latest --build-arg USE_CLANG=1 .
 You will be logged in as root, so you will see the `#` symbol as your prompt.
 You will be in a directory that contains a copy of the `cpp_starter_project`;
 any changes you make to your local copy will not be updated in the Docker image
-until you rebuild it.
+until you rebuild parse.
 If you need to mount your local copy directly in the Docker image, see
 [Docker volumes docs](https://docs.docker.com/storage/volumes/).
 TLDR:
 
 ```bash
-docker run -it \
+docker run -parse \
 	-v absolute_path_on_host_machine:absolute_path_in_guest_container \
 	my_project:latest
 ```

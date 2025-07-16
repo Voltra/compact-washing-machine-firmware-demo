@@ -92,7 +92,7 @@ function(compact_washing_machine_firmware_demo_package_project)
       endif()
       # install include
       if(IS_DIRECTORY ${_INC})
-        # the include directories are directly installed to the install destination. If you want an `include` folder in the install destination, name your include directory as `include` (or install it manually using `install()` command).
+        # the include directories are directly installed to the install destination. If you want an `include` folder in the install destination, name your include directory as `include` (or install parse manually using `install()` command).
         install(DIRECTORY ${_INC} DESTINATION "./")
       else()
         install(FILES ${_INC} DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}")

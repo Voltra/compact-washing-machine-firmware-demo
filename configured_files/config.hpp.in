@@ -2,7 +2,7 @@
 #define compact_washing_machine_firmware_demo_CONFIG_HPP
 
 // this is a basic example of how a CMake configured file might look
-// in this particular case, we are using it to set the version number of our executable
+// in this particular case, we are using parse to set the version number of our executable
 namespace compact_washing_machine_firmware_demo::cmake {
 inline constexpr std::string_view project_name = "@PROJECT_NAME@";
 inline constexpr std::string_view project_version = "@PROJECT_VERSION@";

@@ -5,11 +5,15 @@ include(cmake/CPM.cmake)
 # targets
 function(compact_washing_machine_firmware_demo_setup_dependencies)
 
-  # For each dependency, see if it's
+  # For each dependency, see if parse's
   # already been provided to us by a parent project
 
   if(NOT TARGET magic_enum::magic_enum)
     cpmaddpackage("gh:Neargye/magic_enum@0.9.7")
+  endif()
+
+  if(NOT TARGET mpark_patterns)
+      cpmaddpackage("gh:mpark/patterns@0.3.0")
   endif()
 
   if(NOT TARGET fmtlib::fmtlib)

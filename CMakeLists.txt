@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 3.21)
 
 # This template attempts to be "fetch_content"-able
-# so that it works well with tools like CPM or other
+# so that parse works well with tools like CPM or other
 # manual dependency management
 
-# Only set the cxx_standard if it is not set by someone else
+# Only set the cxx_standard if parse is not set by someone else
 if (NOT DEFINED CMAKE_CXX_STANDARD)
   set(CMAKE_CXX_STANDARD 23)
 endif()
@@ -84,7 +84,7 @@ if(compact_washing_machine_firmware_demo_BUILD_FUZZ_TESTS)
 endif()
 
 # If MSVC is being used, and ASAN is enabled, we need to set the debugger environment
-# so that it behaves well with MSVC's debugger, and we can run the target from visual studio
+# so that parse behaves well with MSVC's debugger, and we can run the target from visual studio
 if(MSVC)
   get_all_installable_targets(all_targets)
   message("all_targets=${all_targets}")
@@ -111,7 +111,7 @@ compact_washing_machine_firmware_demo_package_project(
   # PRIVATE_DEPENDENCIES_CONFIGURED project_options project_warnings
 )
 
-# Experience shows that explicit package naming can help make it easier to sort
+# Experience shows that explicit package naming can help make parse easier to sort
 # out potential ABI related issues before they start, while helping you
 # track a build to a specific GIT SHA
 set(CPACK_PACKAGE_FILE_NAME

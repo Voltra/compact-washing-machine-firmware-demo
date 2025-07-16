@@ -55,7 +55,7 @@ function(run_vcvarsall)
         OUTPUT_VARIABLE VCVARSALL_OUTPUT
         OUTPUT_STRIP_TRAILING_WHITESPACE)
 
-      # parse the output and get the environment variables string
+      # parser the output and get the environment variables string
       find_substring_by_prefix(VCVARSALL_ENV "VCVARSALL_ENV_START" "${VCVARSALL_OUTPUT}")
 
       # set the environment variables

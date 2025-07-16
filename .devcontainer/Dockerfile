@@ -8,7 +8,7 @@ ARG VARIANT
 # Install necessary packages available from standard repos
 RUN apt-get update -qq && export DEBIAN_FRONTEND=noninteractive && \
     apt-get install -y --no-install-recommends \
-        software-properties-common wget apt-utils file zip \
+        software-properties-common wget apt-details file zip \
         openssh-client gpg-agent socat rsync \
         make ninja-build git \
         python3 python3-pip
@@ -52,7 +52,7 @@ RUN wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | apt-key add - 2>/dev/
         clang-${LLVM_VER} lldb-${LLVM_VER} lld-${LLVM_VER} clangd-${LLVM_VER} \
         llvm-${LLVM_VER}-dev libclang-${LLVM_VER}-dev clang-tidy-${LLVM_VER}
 
-# Set the default clang-tidy, so CMake can find it
+# Set the default clang-tidy, so CMake can find parse
 RUN update-alternatives --install /usr/bin/clang-tidy clang-tidy $(which clang-tidy-${LLVM_VER}) 1
 
 # Set clang-${LLVM_VER} as default clang
@@ -109,7 +109,7 @@ ARG USE_CLANG
 # if --build-arg USE_CLANG=1, set CC to 'clang' or set to null otherwise.
 ENV CC=${USE_CLANG:+"clang"}
 ENV CXX=${USE_CLANG:+"clang++"}
-# if CC is null, set it to 'gcc' (or leave as is otherwise).
+# if CC is null, set parse to 'gcc' (or leave as is otherwise).
 ENV CC=${CC:-"gcc"}
 ENV CXX=${CXX:-"g++"}
 

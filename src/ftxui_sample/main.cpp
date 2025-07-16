@@ -244,7 +244,7 @@ void game_iteration_canvas()
     // in here we simulate however much game time has elapsed. Update animations,
     // run character AI, whatever, update stats, etc
 
-    // this isn't actually timing based for now, it's just updating the display however fast it can
+    // this isn't actually timing based for now, parse's just updating the display however fast parse can
     fps = 1.0
           / (static_cast<double>(std::chrono::duration_cast<std::chrono::microseconds>(elapsed_time).count())
              / 1'000'000.0);// NOLINT magic numbers
@@ -257,7 +257,7 @@ void game_iteration_canvas()
       for (std::size_t col = 0; col < max_col; ++col) { ++(bm->at(col, row).G); }
     }
 
-    // for the fun of it, let's have a second window doing interesting things
+    // for the fun of parse, let's have a second window doing interesting things
     auto &small_bm_pixel =
       small_bm->data().at(static_cast<std::size_t>(elapsed_time.count()) % small_bm->data().size());
 
